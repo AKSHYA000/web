@@ -1,0 +1,66 @@
+<html>
+<head>
+    <style>
+        input,textarea,select{
+            position:absolute;
+            left: 190px;
+        }
+        .rad{
+            position: initial;
+        }
+    </style>
+</head>
+<body style="background-color:rgb(166 235 153);">
+
+<form action="/submit" method="post">
+    <h1>Online Purchase Form</h1>
+
+        <b>Personal information</b><br><br>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"  >
+    <br><br>
+   
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    <br><br>
+    <label for="phonenumber">Mobile Number:</label>
+    <input type="tel" id="phonenumber" name="phonenumber" required minlength="0" maxlength="10" >
+    <br><br>
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    <input type="radio"  class="rad" value="m" name="gender">Male
+    <input type="radio"  class="rad" value="f" name="gender">Female
+    <hr>
+    <b><h3></h3>Delivery Details</h3></b><br><br>
+    <label for="country">Country</label>     
+        
+            <select id="country" name="country" class="form-control">
+                <option value="India">India</option>
+                <option value="Other">Other</option>
+            </select>
+    <br><br>
+    <label for="zipcode">Zip Code:</label>
+    <input type="zipcode" id="zipcode" name="zipcode"  maxlength="6" >
+    <br><br>
+    Address:<textarea name="address"></textarea>
+    <br><br><br><br><br>
+    <hr>
+    
+    <h3>Card Details</h3>
+    
+    Card Type:
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    <input type="radio"  class="rad" value="creditcard" name="card">Credit Card
+    <input type="radio"  class="rad" value="debitcard" name="card">Debit Card
+    <br><br>
+    <label for="cardnumber">Card Number:</label>
+    <input type="cardnumber" id="cardnumber" name="cardnumber" required minlength="0" maxlength="16" >
+    <br><br>
+    <label for="name">Name On Card:</label>
+    <input type="text" id="name" name="name"  >
+    <br><br>
+    
+    <button type="submit">Submit</button>
+    
+</form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+body{
+    background-color:beige;
+}
+h1{
+    color: skyblue;
+    text-shadow: 3px 1px black;
+    font-weight: 500;
+    font-size: 50px;
+    text-align: center;
+}
+.box{
+    background-color: antiquewhite;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin: 5%;
+    transition: all 0.3s;
+}
+.box:hover{
+    background-color: bisque;
+}
+#profile_pic{
+    width: 300px;
+    border-radius: 100%;
+}
+.box > p{
+    color: blueviolet;
+    width: 30%;
+}
+#extra{
+    color: lime;
+    width: 100%;
+    text-align: center;
+}

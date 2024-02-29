@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number Checker</title>
+</head>
+<body>
+    <script>
+        // Function to check if a number is prime
+        function isPrime(num) {
+            // Check if the number is less than 2
+            if (num < 2) {
+                return false;
+            }
+            
+            // Loop from 2 to the square root of the number
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                // If the number is divisible evenly by any number between 2 and the square root of the number, it's not prime
+                if (num % i === 0) {
+                    return false;
+                }
+            }
+            
+            // If the number is not divisible evenly by any number between 2 and the square root of the number, it's prime
+            return true;
+        }
+
+        // Test the function with some numbers
+        const number1 = 7;
+        const number2 = 12;
+
+        console.log(number1 + " is prime: " + isPrime(number1)); // Output: true
+        console.log(number2 + " is prime: " + isPrime(number2)); // Output: false
+    </script>
+</body>
+</html>
