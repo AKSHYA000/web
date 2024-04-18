@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <form name="form" onsubmit="return valid_form()">
+        <label for="Name">Name:</label>
+        <input type="text" name="Name" id="name"><br>
+        <span id="nameError"></span><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br>
+        <span id="passError"></span><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        function valid_form() {
+            var x = document.getElementById("name").value;
+            var y = document.getElementById("password").value;
+            var nameError = document.getElementById("nameError");
+            var passError = document.getElementById("passError");
+            nameError.innerHTML = "";
+            passError.innerHTML = "";
+            var isValid = true;
+            if (x == "") {
+                nameError.innerHTML = "Name should not be empty";
+                isValid = false;
+            }
+            if (y.length < 6) {
+                passError.innerHTML = "Password should be at least 6 characters long";
+                isValid = false;
+            }
+            return isValid;
+        }
+    </script>
+</body>
+
+</html>

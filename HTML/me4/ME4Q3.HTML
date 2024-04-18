@@ -1,0 +1,15 @@
+<html>
+<body>
+    <div class="container">
+        <p class="example">Element 1</p>
+        <p class="example">Element 2</p>
+        <p class="example">Element 3</p>
+    </div>
+    <script>
+        var elements = document.getElementsByClassName('example');
+        for (var i = 0; i < elements.length; i++) {
+            document.write(elements[i].textContent);
+        }
+    </script>
+</body>
+</html>

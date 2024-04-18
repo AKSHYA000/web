@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    body {
+        background: linear-gradient(to right, #0F2027, #203A43, #2C5364);
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    button {
+        background-color: aqua;
+        color: white;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    button:hover {
+        background-color: #00cccc;
+    }
+
+    .login-box {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username"><br>
+            <label for="password">New pass:</label><br>
+            <input type="password" id="password"><br>
+            <button onclick="">Change</button>
+        </div>
+    </div>
+</body>
+</html>

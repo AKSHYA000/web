@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cookie Management</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    // Function to set a cookie
+    function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    // Function to get a cookie value by name
+    function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+
+    // Function to delete a cookie by name
+    function deleteCookie(name) {   
+        document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    }
+
+    // Event handler for setting a cookie
+    $('#setCookieBtn').click(function() {
+        var cookieName = $('#cookieName').val();
+        var cookieValue = $('#cookieValue').val();
+        var expiryDays = parseInt($('#expiryDays').val());
+        setCookie(cookieName, cookieValue, expiryDays);
+        alert('Cookie set successfully!');
+    });
+
+    // Event handler for getting a cookie value
+    $('#getCookieBtn').click(function() {
+        var cookieName = $('#cookieName').val();
+        var cookieValue = getCookie(cookieName);
+        alert('Cookie Value: ' + cookieValue);
+    });
+    $('#deleteCookieBtn').click(function() {
+        var cookieName = $('#cookieName').val();
+        deleteCookie(cookieName);
+        alert('Cookie deleted successfully!');
+    });
+});
+</script>
+</head> 
+<body>
+
+<h2>Cookie Management</h2>
+
+<label for="cookieName">Cookie Name:</label>
+<input type="text" id="cookieName"><br><br>
+
+<label for="cookieValue">Cookie Value:</label>
+<input type="text" id="cookieValue"><br><br>
+
+<label for="expiryDays">Expiry Days:</label>
+<input type="number" id="expiryDays" value="7"><br><br>
+
+<button id="setCookieBtn">Set Cookie</button>
+<button id="getCookieBtn">Get Cookie</button>
+<button id="deleteCookieBtn">Delete Cookie</button>
+
+</body>
+</html>

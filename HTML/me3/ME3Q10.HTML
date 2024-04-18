@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <h1><CENTER>CALSULATOR USING JAVASCRIPT(ARITHMETIC OPERATION)</h1></CENTER>
+    </head>
+    <HR>
+        <body>
+            <center>
+        <h3><b>Enter a number in the box for calculation</b></h3>
+       
+            <form>
+            <label for='num1'>Enter number 1:</label>
+            <input type="number" name="num1" id="num1"><br><br>
+            <label for='num2'>Enter number 2:</label>
+            <input type="number" name="num2" id="num2"><br><br>
+
+            <button type="button" onclick="add()">ADD</button>
+            <button type="button" onclick="multiply()">MULTIPLY</button>
+            <button type="button" onclick="divide()">DIVIDE</button>
+            <button type="button" onclick="subtract()">SUBTRACT</button><br><br>
+            Result is:<input type="number" id="result" >
+        </form>
+            </center>
+        
+        <script>
+           
+            function add(){
+                var num1=document.getElementById('num1').value
+                var num2=document.getElementById('num2').value
+                document.getElementById('result').value =parseInt(num1)+parseInt(num2)
+            }
+            function multiply(){
+                var num1=document.getElementById('num1').value
+                var num2=document.getElementById('num2').value
+                document.getElementById('result').value =parseInt(num1)*parseInt(num2)
+            }
+            function divide(){
+                var num1=document.getElementById('num1').value
+                var num2=document.getElementById('num2').value
+                document.getElementById('result').value =parseInt(num1)/parseInt(num2)                
+            }
+            function subtract(){
+                var num1=document.getElementById('num1').value
+                var num2=document.getElementById('num2').value
+                document.getElementById('result').value =parseInt(num1)-parseInt(num2)                
+            }
+        </script>
+        </body>
+</html>

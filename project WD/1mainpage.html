@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A NEW WAY TO LEARN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #0F2027, #203A43, #2C5364);
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        button {
+            background-color: aqua;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            font-size: 1.2em;
+        }
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        h1, h4, p {
+            margin: 10px;
+        }
+        h1 {
+            color: #55E6C1;
+            font-size: 3em;
+        }
+        h4 {
+            color: #FFE74C;
+            font-size: 1.5em;
+        }
+        p {
+            color: #55E6C1;
+            font-size: 1.1em;
+        }
+        .container {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 800px;
+            text-align: left;
+            padding: 40px 20px; /* Added extra padding */
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+            color: #55E6C1;
+            font-size: 1.1em;
+        }
+        a {
+            color: #FF6B6B;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .signup-link {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            color: #FF6B6B;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>A NEW WAY TO LEARN</h1>
+            <h4>LeetCode is the best platform to help you enhance your skills, expand your knowledge, and prepare for technical interviews.</h4>
+            <p>Explore our features:</p>
+            <ul>
+                <li>Thousands of coding problems to solve</li>
+                <li>Interactive coding challenges</li>
+                <li>Real-world projects to work on</li>
+                <li>Community support and discussions</li>
+                <li>Interview preparation resources</li>
+            </ul>
+            <p>Join LeetCode today and embark on a journey of continuous learning and growth!</p>
+        </div>
+        <button onclick="window.location.href = '2login.html'">Login</button>
+        <a href="3create.html" class="signup-link">Don't have an account? Sign up here.</a>
+    </div>
+</body>
+</html>

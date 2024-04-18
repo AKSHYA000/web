@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <form>
+           Enter a number:<input type="number" id="num1" ><br>
+           <button type="button" onclick="facto()">find</button><br>
+           Result:<input type="number" id="fact">
+        </form>
+        <script>
+            function facto()
+            {
+                var num1= parseInt(document.getElementById("num1").value)
+                if (num1 === 0 || num1 === 1) {
+                    document.getElementById("fact").value=1;
+                } 
+                else {
+                    let result = 1;
+                    for (let i = 2; i <= num1; i++) {
+                        result *= i;
+                    }
+                    document.getElementById("fact").value=result;
+                }
+            
+            }
+        </script>
+    </body>
+</html>

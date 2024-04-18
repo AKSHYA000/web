@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background: linear-gradient(to right, #0F2027, #203A43, #2C5364);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .login-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: aqua;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #00cccc;
+        }
+        
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h2 style="color: aqua;">Login</h2>
+            <label for="username" style="color: aqua;">Username:</label><br>
+            <input type="text" id="username"><br>
+            <label for="password" style="color: aqua;">Password:</label><br>
+            <input type="password" id="password"><br>
+            <span class="error-message" id="passError"></span><br>
+            <button onclick="check()">Login</button><br>
+            <a href="4changepass.html"><h4 style="color: red;">Forgot Password? </h4></a>
+        </div>
+    </div>
+
+    <script>
+        function check() {
+            var x = document.getElementById("username").value;
+            var y = document.getElementById("password").value;
+            var nameError = document.getElementById("nameError");
+            var passError = document.getElementById("passError");
+            passError.innerHTML = "";
+            var isValid = true;
+            if (x == "") {
+                passError.innerHTML = "Incorrect username or password.";
+                isValid = false;
+            }
+            if (y.length < 6) {
+                passError.innerHTML = "Incorrect username or password.";
+                isValid = false;
+            }
+            return isValid;
+        }
+    </script>
+</body>
+</html>

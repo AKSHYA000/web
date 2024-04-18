@@ -1,0 +1,20 @@
+<html>
+    <body>
+       
+        <script>
+            function check(){
+                var num1=document.getElementById('num').value
+                if (num1 %2 === 0){
+                document.getElementById('result').value="even"
+                }
+                else{
+                document.getElementById('result').value="odd"
+            }}
+        </script>
+        enter the number which you want to check
+        <input type="number" id="num">
+        <button type="button" onclick="check()">check</button><br><br>
+        result=<input type="text" id="result">
+        
+    </body>
+</html>

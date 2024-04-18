@@ -1,0 +1,33 @@
+<html>
+    <body>
+        Enter a number:<input type="number" id="num">
+        <button type="button" onclick="checkPrime()">check</button>
+        result:<input type="text" id="result">
+            <script>
+                function isPrime(number){
+                total_divide = 0;
+                for(let i=1;i<=number;i++){
+                    if(number%i==0){
+                        total_divide += 1;
+                    }
+                }
+                if(total_divide <= 2){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+            function checkPrime() {
+            var num=document.getElementById('num').value
+            const numberToCheck = parseInt(num);
+            if (isPrime(numberToCheck)) {
+                document.getElementById("result").value = numberToCheck + ' is prime.';
+            } else {
+                document.getElementById("result").value = numberToCheck + ' is not prime.';
+            }
+        }
+        
+        </script>
+    </body>
+</html>
